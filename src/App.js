@@ -16,7 +16,7 @@ import FoodInformation from "./components/FoodInformation";
 import PlantBasedRecipes from "./components/PlantBasedRecipes";
 
 function App() {
-  const [isNavbarMinimized, setIsNavbarMinimized] = useState(false);
+  const [isNavbarMinimized, setIsNavbarMinimized] = useState(true);
 
   return (
     <div>

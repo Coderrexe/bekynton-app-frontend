@@ -5,7 +5,7 @@ import LeadershipTeam from "./LeadershipTeam";
 import Sustainability from "./Sustainability";
 
 const Navbar = ({ isNavbarMinimized, setIsNavbarMinimized }) => {
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(isNavbarMinimized);
 
   const toggleNavbar = () => {
     setIsMinimized(!isMinimized);
