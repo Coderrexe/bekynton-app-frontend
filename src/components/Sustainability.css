@@ -1,0 +1,53 @@
+.sustainability-scroll-container {
+    overflow-y: auto; 
+    max-height: calc(100vh - 80px); 
+  }
+  
+  .sustainability-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sustainability-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pdf-viewer {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .extra-features {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .extra-features h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .extra-features ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Style for  PDF viewer */
+  .react-pdf__Document {
+    display: block;
+  }
+  
+  .react-pdf__Page {
+    margin: 20px;
+  }
+  

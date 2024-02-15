@@ -1,0 +1,37 @@
+.food-information-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .food-dropdown {
+    margin-bottom: 20px;
+  }
+  
+  .food-dropdown label {
+    font-weight: bold;
+  }
+  
+  .food-dropdown select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .food-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: left;
+  }
+  
+  .food-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  

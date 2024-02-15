@@ -1,0 +1,2 @@
+const pdfUrl = "path/to/sustainability.pdf";
+import PMark from "../Uploads/PLANET-MARK.pdf";

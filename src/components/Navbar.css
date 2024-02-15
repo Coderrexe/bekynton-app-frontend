@@ -1,0 +1,110 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px; 
+  background-color: #e0e0e0; 
+  color: #333;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Arial', sans-serif; 
+  z-index: 1; /* makes NAVBAR above content */
+  transition: width 1s ease; /* makes transition smooth */
+  background-color: #fff; /* Change background color to white */
+  color: #333; /* Change text color to dark gray */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-top {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #007acc; 
+}
+
+.navbar-top a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* styles for icons */
+.navbar-top i {
+  font-size: 30px; 
+  margin-right: 10px; /*  space between icon and text */
+}
+
+.navbar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; /*to Remove default list margin */
+}
+
+.navbar-item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #444; /*thin divider */
+  text-align: center; 
+}
+
+.navbar-item:last-child {
+  border-bottom: none; /* Remove divider for the last one */
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #444; 
+  font-weight: bold;
+  font-size: 18px; 
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  display: block; /* Display them as blocks for spacing */
+}
+
+.navbar-item a i {
+  display: block;
+  margin-bottom: 5px; 
+  font-size: 24px; 
+}
+
+.navbar-item a:hover {
+  background-color: #96c8a2; 
+}
+
+
+
+.navbar.minimized {
+  width: 50px; /*  the width for the minimized state */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically  - for the eton logo*/
+  /* background-color: transparent; to remove background color */
+  padding: 0; 
+}
+
+.navbar-top.minimized-top {
+  text-align: center;
+}
+
+.navbar-top img {
+  width: 50px; 
+  display: block;
+  margin: 0 auto;
+  background-color: transparent; 
+}
+
+.toggle-button {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
