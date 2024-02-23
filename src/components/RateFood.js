@@ -56,13 +56,15 @@ const RateFood = () => {
             <label>Which meal?</label>
             <select
               value={mealType}
+              name="mealType"
+              required
               onChange={(e) => setMealType(e.target.value)}
             >
               <option value={"Lunch"}>Lunch</option>
               <option value={"Supper"}>Supper</option>
             </select>
             <h3>Main Course</h3>
-            <select onChange={(e) => setMainCourse(e.target.value)} required>
+            <select name="mainCourseName" onChange={(e) => setMainCourse(e.target.value)} required>
               <option value="">Select Main Course</option>
               {/* Populate with your options */}
             </select>
@@ -70,6 +72,7 @@ const RateFood = () => {
             <input
               type="number"
               value={mainCourseRating}
+              name="mainCourseRating"
               onChange={(e) =>
                 setMainCourseRating(Math.max(1, Math.min(10, e.target.value)))
               }
@@ -80,6 +83,7 @@ const RateFood = () => {
             <label>How much of the main course did you eat?</label>
             <select
               value={mainCoursePortion}
+              name="mainCoursePortionEaten"
               onChange={(e) => setMainCoursePortion(e.target.value)}
             >
               <option value={0}>0%</option>
@@ -94,6 +98,7 @@ const RateFood = () => {
               <input
                 type="checkbox"
                 checked={keepMainCourseOnMenu}
+                name="mainCourseKeepOnMenu"
                 onChange={() => setKeepMainCourseOnMenu(!keepMainCourseOnMenu)}
               />
               Keep this meal on the menu?
@@ -103,7 +108,7 @@ const RateFood = () => {
           {/* Dessert Section */}
           <div className="section">
             <h3>Dessert</h3>
-            <select onChange={(e) => setDessert(e.target.value)} required>
+            <select name="dessertName" onChange={(e) => setDessert(e.target.value)} required>
               <option value="">Select Dessert</option>
               {/* Populate with your options */}
             </select>
@@ -111,6 +116,7 @@ const RateFood = () => {
             <input
               type="number"
               value={dessertRating}
+              name="dessertRating"
               onChange={(e) =>
                 setDessertRating(Math.max(1, Math.min(10, e.target.value)))
               }
@@ -121,6 +127,7 @@ const RateFood = () => {
             <label>How much of the dessert did you eat?</label>
             <select
               value={dessertPortion}
+              name="dessertPortionEaten"
               onChange={(e) => setDessertPortion(e.target.value)}
             >
               <option value={0}>0%</option>
@@ -134,6 +141,7 @@ const RateFood = () => {
             <label>
               <input
                 type="checkbox"
+                name="dessertKeepOnMenu"
                 checked={keepDessertOnMenu}
                 onChange={() => setKeepDessertOnMenu(!keepDessertOnMenu)}
               />

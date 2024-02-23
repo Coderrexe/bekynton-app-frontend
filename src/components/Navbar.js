@@ -16,14 +16,18 @@ const Navbar = ({ isNavbarMinimized, setIsNavbarMinimized }) => {
     <nav className={`navbar ${isMinimized ? "minimized" : ""}`}>
       <div className={`navbar-top ${isMinimized ? "minimized-top" : ""}`}>
         {isMinimized ? (
-          <i className="fas fa-university"></i>
-        ) : (
           <a
-            href="https://www.etoncollege.com/"
-            target="_blank"
+            href="/"
             rel="noopener noreferrer"
           >
-            <i className="fas fa-university"></i> ETON COLLEGE
+            <i className="fas fa-university"></i>
+          </a>
+        ) : (
+          <a
+            href="/"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-university"></i> EcoDine
           </a>
         )}
       </div>
@@ -34,14 +38,19 @@ const Navbar = ({ isNavbarMinimized, setIsNavbarMinimized }) => {
               <i className="fas fa-home"></i> Home
             </Link>
           </li>
-          <li className="navbar-item">
+          {/* <li className="navbar-item">
             <Link to="/create-routine">
               <i className="fas fa-utensils"></i> Create Your Ideal Food Routine
             </Link>
-          </li>
+          </li> */}
           <li className="navbar-item">
             <Link to="/rate-food">
               <i className="fas fa-star"></i> Meal Feedback
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/food-information">
+              <i className="fas fa-star"></i> Know What You Eat
             </Link>
           </li>
           <li className="navbar-item">
@@ -51,19 +60,14 @@ const Navbar = ({ isNavbarMinimized, setIsNavbarMinimized }) => {
           </li>
           <li className="navbar-item">
             <Link to="/leadership-team">
-              <i className="fas fa-star"></i> The Leadership Team
+              <i className="fas fa-star"></i> About
             </Link>
           </li>
-          <li className="navbar-item">
-            <Link to="/food-information">
-              <i className="fas fa-star"></i> Know What You Eat
-            </Link>
-          </li>
-          <li className="navbar-item">
+          {/* <li className="navbar-item">
             <Link to="/plant-based-recipes">
               <i className="fas fa-star"></i> Alternatives
             </Link>
-          </li>
+          </li> */}
         </ul>
       )}
       <button className="toggle-button" onClick={toggleNavbar}>
