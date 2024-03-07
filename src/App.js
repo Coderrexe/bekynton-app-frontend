@@ -10,7 +10,6 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LeadershipTeam from "./components/LeadershipTeam";
 import FoodSelection from "./components/FoodSelection";
-
 import Sustainability from "./components/Sustainability";
 import FoodInformation from "./components/FoodInformation";
 import PlantBasedRecipes from "./components/PlantBasedRecipes";
@@ -19,29 +18,27 @@ function App() {
   const [isNavbarMinimized, setIsNavbarMinimized] = useState(true);
 
   return (
-    <div>
-      <Router>
-        <div>
-          <LoginHeader />
-          <Navbar
-            isNavbarMinimized={isNavbarMinimized}
-            setIsNavbarMinimized={setIsNavbarMinimized}
+    <Router>
+      <div class="App">
+        {/* <LoginHeader /> */}
+        <Navbar
+        // isNavbarMinimized={isNavbarMinimized}
+        // setIsNavbarMinimized={setIsNavbarMinimized}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home isMinimized={isNavbarMinimized} />}
           />
-          <Routes>
-            <Route
-              path="/"
-              element={<Home isMinimized={isNavbarMinimized} />}
-            />
-            <Route path="/create-routine" Component={FoodSelection} />
-            <Route path="/sustainability" Component={Sustainability} />
-            <Route path="/rate-food" Component={RateFood} />
-            <Route path="/leadership-team" Component={LeadershipTeam} />
-            <Route path="/food-information" Component={FoodInformation} />
-            <Route path="/plant-based-recipes" Component={PlantBasedRecipes} />
-          </Routes>
-        </div>
-      </Router>
-    </div>
+          <Route path="/create-routine" Component={FoodSelection} />
+          <Route path="/sustainability" Component={Sustainability} />
+          <Route path="/rate-food" Component={RateFood} />
+          <Route path="/leadership-team" Component={LeadershipTeam} />
+          <Route path="/food-information" Component={FoodInformation} />
+          <Route path="/plant-based-recipes" Component={PlantBasedRecipes} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

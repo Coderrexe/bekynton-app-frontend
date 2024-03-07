@@ -1,110 +1,93 @@
+.active{
+  background-color: #1d4ed8;
+}
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 250px; 
-  background-color: #e0e0e0; 
-  color: #333;
-  padding: 1rem;
+nav {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-family: 'Arial', sans-serif; 
-  z-index: 1; /* makes NAVBAR above content */
-  transition: width 1s ease; /* makes transition smooth */
-  background-color: #fff; /* Change background color to white */
-  color: #333; /* Change text color to dark gray */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  width: 100vw;
 }
 
-
-.navbar-top {
-  padding: 10px 0;
-  text-align: center;
-  background-color: #007acc; 
-}
-
-.navbar-top a {
-  text-decoration: none;
-  color: #fff;
+nav .title {
+  font-size: 1.5rem;
+  margin: 1rem;
   font-weight: bold;
-  font-size: 20px;
-}
-
-/* styles for icons */
-.navbar-top i {
-  font-size: 30px; 
-  margin-right: 10px; /*  space between icon and text */
-}
-
-.navbar-list {
-  list-style: none;
-  padding: 0;
-  margin: 0; /*to Remove default list margin */
-}
-
-.navbar-item {
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #444; /*thin divider */
-  text-align: center; 
-}
-
-.navbar-item:last-child {
-  border-bottom: none; /* Remove divider for the last one */
-}
-
-.navbar-item a {
   text-decoration: none;
-  color: #444; 
-  font-weight: bold;
-  font-size: 18px; 
-  padding: 15px;
-  transition: background-color 0.3s ease;
-  display: block; /* Display them as blocks for spacing */
+  color: white;
 }
 
-.navbar-item a i {
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+ list-style: none; 
+}
+
+nav ul li a {
   display: block;
-  margin-bottom: 5px; 
-  font-size: 24px; 
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.navbar-item a:hover {
-  background-color: #96c8a2; 
+nav ul li a:not(.active):hover {
+  background-color:#172554 ;
 }
 
-
-
-.navbar.minimized {
-  width: 50px; /*  the width for the minimized state */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically  - for the eton logo*/
-  /* background-color: transparent; to remove background color */
-  padding: 0; 
-}
-
-.navbar-top.minimized-top {
-  text-align: center;
-}
-
-.navbar-top img {
-  width: 50px; 
-  display: block;
-  margin: 0 auto;
-  background-color: transparent; 
-}
-
-.toggle-button {
+nav .menu {
+  display: none;
   position: absolute;
-  bottom: 10px;
-  left: 5px;
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 20px;
-  cursor: pointer;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
 }
 
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+
+@media (max-width: 480px) {
+  nav .menu {
+      display: flex;
+  }
+
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+      display: flex;
+  }
+
+  nav ul li {
+      width: 100%;
+      text-align: center;
+  }
+
+  nav ul li a {
+      margin: 0.2rem 0.5rem;
+  }
+}
