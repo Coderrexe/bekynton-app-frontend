@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import foodOptions from "../data/foodOptions";
 
-import styles from "./FoodSelection.module.css";
+import styles from "./FoodSelection.css";
 
 const FoodSelection = () => {
   const [selectedFoods, setSelectedFoods] = useState([]);

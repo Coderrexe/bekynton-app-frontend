@@ -66,6 +66,7 @@ const RateFood = () => {
             <h3>Main Course</h3>
             <select name="mainCourseName" onChange={(e) => setMainCourse(e.target.value)} required>
               <option value="">Select Main Course</option>
+              <option value="">Chicken Supreme, Mushroom, Leek & Tarragon Cream Sauce</option>
               {/* Populate with your options */}
             </select>
             <label>Rate the main course (1-10):</label>

@@ -9,6 +9,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to="/" className="title">
+        {/* <img src="ecodine.webp" alt="EcoDine" height={40} width={40} /> */}
         EcoDine
       </Link>
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
@@ -23,12 +24,12 @@ const Navbar = () => {
         <li>
           <NavLink to="/food-information">Food Info</NavLink>
         </li>
-        {/* <li>
+        <li>
           <NavLink to="/login">Login</NavLink>
         </li>
         <li>
           <NavLink to="/signup">Sign Up</NavLink>
-        </li> */}
+        </li>
       </ul>
     </nav>
   );

@@ -1,37 +1,35 @@
 import React, { useState, useEffect } from "react";
-import "./home-styles.css";
-import { Link } from "react-router-dom";
-import Sustainability from "./Sustainability";
+import "./Home.css";
 
-const facts = [
-  // "Fact 1: Carbon emissions contribute to climate change.",
-  // "Fact 2: Transportation is a major source of carbon emissions.",
-  // "Fact 3: Renewable energy reduces carbon emissions.",
-  // "Fact 4: Deforestation increases carbon emissions.",
-  // "Fact 5: Carbon capture technologies can help reduce emissions.",
-  // "Fact 6: Small lifestyle changes can make a big impact on carbon emissions.",
-];
+// const facts = [
+// "Fact 1: Carbon emissions contribute to climate change.",
+// "Fact 2: Transportation is a major source of carbon emissions.",
+// "Fact 3: Renewable energy reduces carbon emissions.",
+// "Fact 4: Deforestation increases carbon emissions.",
+// "Fact 5: Carbon capture technologies can help reduce emissions.",
+// "Fact 6: Small lifestyle changes can make a big impact on carbon emissions.",
+// ];
 
 const Home = () => {
-  const [factIndex, setFactIndex] = useState(0);
+  // const [factIndex, setFactIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFactIndex((prevIndex) => (prevIndex + 1) % facts.length);
-    }, 5000); // Change the fact every 5 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setFactIndex((prevIndex) => (prevIndex + 1) % facts.length);
+  //   }, 5000); // Change the fact every 5 seconds
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="home-scroll-container">
       <div className="home-container">
-        <div className="banner">
+        {/* <div className="banner">
           <p className="fact">{facts[factIndex]}</p>
-        </div>
+        </div> */}
         <header className="home-header">
-          <h1>Welcome to Eton College Meal Services</h1>
-          <p>Your Source for Delicious and Sustainable Meals</p>
+          <h1>Welcome to EcoDine</h1>
+          <p>Your companion for delicious and sustainable meals</p>
         </header>
 
         <section className="home-features">
@@ -41,14 +39,12 @@ const Home = () => {
           </div>
           <div className="feature-card">
             <h2>Know what you eat</h2>
-            <p>
-              Nutritional information about your food
-            </p>
+            <p>Nutritional information about your food</p>
           </div>
-          <div className="feature-card">
+          {/* <div className="feature-card">
             <h2>Sustainability</h2>
             <p>Eton's sustainability mission</p>
-          </div>
+          </div> */}
         </section>
 
         <section className="home-news">
